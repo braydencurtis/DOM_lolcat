@@ -79,7 +79,7 @@ var showCurrentTime = function()
 // Make showCurrentTime into a function
 var updateClock = function () {
   showCurrentTime();
-}
+};
 
 // Call clock function
 updateClock();
