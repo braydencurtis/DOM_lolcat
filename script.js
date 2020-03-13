@@ -87,3 +87,31 @@ updateClock();
 var oneSecond = 1000;
 
 setInterval(updateClock, oneSecond);
+
+
+// Party Time Button
+
+var isPartyTime = false;
+var partyTimeButton = document.getElementById("partyTimeButton");
+ 
+var partyEvent = function() {
+   
+   if (isPartyTime === false) {
+      isPartyTime = true;
+      time = partyTime;
+      // text in the button should read "Party Over"
+      partyTimeButton.innerText = "Party Over";
+      // color of the button should be "#0A8DAB" (bonus!)
+      partyTimeButton.style.background = "#0A8DAB";
+   }
+   else {
+      isPartyTime = false;
+      time = new Date().getHours();
+      // text in the button should read "PARTY TIME!"
+      partyTimeButton.innerText = "PARTY TIME!";
+      // color of the button should be "#222" (bonus!)
+      partyTimeButton.style.background = "#222";
+   }
+};
+
+partyTimeButton.addEventListener("click", partyEvent);
